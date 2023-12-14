@@ -37,7 +37,7 @@ class Auth:
 
         if username_index > -1:
             if self.users[username_index]["password"] == password:
-                self.username = username
+                self.__username = username
             else:
                 print("Please check your username and password")
         else:
@@ -48,7 +48,7 @@ class Auth:
             self.username = username
 
     def signout(self):
-        self.username = None
+        self.__username = None
 
     def __del__(self):
         print("delete Auth")
